@@ -17,16 +17,19 @@ document.getElementById("8").addEventListener("click", function(){ tictac(8) })
 var turn = 1
 
 function tictac(cell) {
-   if (turn == 1) {
-       board[cell]="x"
-       document.getElementById(cell).innerHTML = "x"
-       turn = 2
-   } else { 
-       board[cell]="o"
-       document.getElementById(cell).innerHTML = "o"
-       turn = 1
+    if (board[cell] == undefined) {
+       
+        if (turn == 1) {
+            board[cell]="x"
+            document.getElementById(cell).innerHTML = "x"
+            turn = 2
+        } else { 
+            board[cell]="o"
+            document.getElementById(cell).innerHTML = "o"
+            turn = 1
+        }
+   
    }
-
     console.log(board[cell])
     console.log(board)
 }
